@@ -17,7 +17,7 @@ INDEX_AREA = 3
 INDEX_INPUT_TYPE = 4
 INDEX_INPUT_DOSAGE = 5
 INDEX_TOTAL_INPUT = 6
-INDEX_ROW_SPACING_METERS = 7
+INDEX_ROW_WIDTH_METERS = 7
 INDEX_ROW_COUNT = 8
 INDEX_TOTAL_ROW_LENGTH = 9
 
@@ -35,8 +35,9 @@ ENTER_CROP_TYPE_MESSAGE = "Enter crop type (grape/corn): "
 ENTER_WIDTH_MESSAGE = "Enter field width in meters: "
 ENTER_LENGTH_MESSAGE = "Enter field length in meters: "
 ENTER_INPUT_TYPE_MESSAGE = "Enter input type: "
-ENTER_INPUT_DOSAGE_MESSAGE = "Enter input dosage: "
-ENTER_ROW_SPACING_MESSAGE = "Enter row spacing in meters: "
+ENTER_GRAPE_INPUT_DOSAGE_MESSAGE = "Enter input dosage per linear meter: "
+ENTER_CORN_INPUT_DOSAGE_MESSAGE = "Enter input dosage per square meter: "
+ENTER_ROW_WIDTH_MESSAGE = "Enter row width in meters: "
 ENTER_UPDATE_INDEX_MESSAGE = "Enter the record index to update: "
 ENTER_DELETE_INDEX_MESSAGE = "Enter the record index to delete: "
 
