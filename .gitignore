@@ -3,3 +3,5 @@
 *.tsv
 *.xls
 *.xlsx
+__pycache__/
+*.pyc
