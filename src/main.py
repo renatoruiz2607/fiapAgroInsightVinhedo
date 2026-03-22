@@ -50,7 +50,7 @@ def show_records():
 
         # Tratamento de None → "N/A"
         area = area if area is not None else "N/A"
-        total_input = total_input if total_input is not None else "N/A"
+        total_input = f"{total_input:.2f}" if total_input != "N/A" else "N/A"
         row_spacing = row_spacing if row_spacing is not None else "N/A"
         row_count = row_count if row_count is not None else "N/A"
         total_row_length = total_row_length if total_row_length is not None else "N/A"
@@ -68,8 +68,9 @@ def main():
 
         if option == MENU_ADD:
             record = create_record()
-            add_record(record)
-            print(RECORD_ADDED_MESSAGE)
+            if record is not None:
+                add_record(record)
+                print(RECORD_ADDED_MESSAGE)
 
         elif option == MENU_LIST:
             show_records()
@@ -84,10 +85,11 @@ def main():
             index = int(input(ENTER_UPDATE_INDEX_MESSAGE))
             new_record = create_record()
 
-            if update_record(index, new_record):
-                print(RECORD_UPDATED_MESSAGE)
-            else:
-                print(INVALID_INDEX_MESSAGE)
+            if new_record is not None:
+                if update_record(index, new_record):
+                    print(RECORD_UPDATED_MESSAGE)
+                else:
+                    print(INVALID_INDEX_MESSAGE)
 
         elif option == MENU_DELETE:
             show_records()
