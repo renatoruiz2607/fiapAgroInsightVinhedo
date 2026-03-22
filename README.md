@@ -52,50 +52,50 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
 ## 🔧 Como executar o código
 
-*Pré Requisitos:
+*Pré Requisitos:*
 
-Git - Utilizado para clonar o repositório do projeto.
+*Git - Utilizado para clonar o repositório do projeto.*
 
-Visual Studio Code (VS Code) ou outra IDE/editor de sua preferência. Recomenda-se o VS Code para facilitar a execução dos arquivos Python e R.
+*Visual Studio Code (VS Code) ou outra IDE/editor de sua preferência. Recomenda-se o VS Code para facilitar a execução dos arquivos Python e R.*
 
-Python 3.10 ou superior - Utilizado no desenvolvimento da aplicação principal.
+*Python 3.10 ou superior - Utilizado no desenvolvimento da aplicação principal.*
 
-R 4.3 ou superior - Utilizado para processamento estatístico e consulta de dados meteorológicos.
+*R 4.3 ou superior - Utilizado para processamento estatístico e consulta de dados meteorológicos.*
 
-Pacote jsonlite no R - Necessário para consumir a API meteorológica pública no arquivo weather_report.R.
-
-
-Fase 1 — Clonar o repositório:
-
-No terminal, execute: git clone git@github.com:renatoruiz2607/fiapAgroInsightVinhedo.git
-
-Em seguida, acesse a pasta do projeto: cd fiapAgroInsightVinhedo
+*Pacote jsonlite no R - Necessário para consumir a API meteorológica pública no arquivo weather_report.R.*
 
 
-Fase 2 — Preparar o ambiente Python:
+*Fase 1 — Clonar o repositório:*
 
-No terminal, verifique se o Python está instalado: python3 --version
+*No terminal, execute: git clone git@github.com:renatoruiz2607/fiapAgroInsightVinhedo.git*
 
-
-Fase 3 — Preparar o ambiente R:
-
-No terminal, verifique se o R está instalado: R --version
+*Em seguida, acesse a pasta do projeto: cd fiapAgroInsightVinhedo*
 
 
-Fase 4 — Executar a aplicação Python:
+*Fase 2 — Preparar o ambiente Python:*
 
-Dê play no sistema a partir do arquivo src/main.py
+*No terminal, verifique se o Python está instalado: python3 --version*
 
 
-Ao iniciar, o sistema exibirá um menu interativo no terminal com opções para:
-   - adicionar registros de culturas
-   - listar registros cadastrados
-   - atualizar registros
-   - excluir registros
-   - exportar os dados para CSV
-   - executar a análise estatística em R
-   - executar a consulta meteorológica em R
-   - encerrar a execução*
+*Fase 3 — Preparar o ambiente R:*
+
+*No terminal, verifique se o R está instalado: R --version*
+
+
+*Fase 4 — Executar a aplicação Python:*
+
+*Dê play no sistema a partir do arquivo src/main.py*
+
+
+*Ao iniciar, o sistema exibirá um menu interativo no terminal com opções para:*
+   *- adicionar registros de culturas*
+   *- listar registros cadastrados*
+   *- atualizar registros*
+   *- excluir registros*
+   *- exportar os dados para CSV*
+   *- executar a análise estatística em R*
+   *- executar a consulta meteorológica em R*
+   *- encerrar a execução*
 
 
 ## 🗃 Histórico de lançamentos
