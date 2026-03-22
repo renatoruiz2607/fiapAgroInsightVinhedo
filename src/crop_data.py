@@ -15,20 +15,65 @@ from constants import (
     ENTER_WIDTH_MESSAGE,
     ENTER_LENGTH_MESSAGE,
     ENTER_INPUT_TYPE_MESSAGE,
-    ENTER_ROW_WIDTH_MESSAGE,
+    ENTER_ROW_SPACING_MESSAGE,
     ENTER_GRAPE_INPUT_DOSAGE_MESSAGE,
-    ENTER_CORN_INPUT_DOSAGE_MESSAGE
+    ENTER_CORN_INPUT_DOSAGE_MESSAGE,
+    INVALID_CROP_TYPE_MESSAGE,
+    INVALID_NUMBER_MESSAGE,
+    INVALID_POSITIVE_NUMBER_MESSAGE,
+    INVALID_TEXT_MESSAGE,
+    INVALID_ROW_SPACING_MESSAGE
 )
 
+def get_valid_text(message):
+    while True:
+        value = input(message).strip().lower()
+
+        if value and any(character.isalpha() for character in value):
+            return value
+
+        print(INVALID_TEXT_MESSAGE)
+
+def get_valid_crop_type():
+    while True:
+        crop_type = input(ENTER_CROP_TYPE_MESSAGE).strip().lower()
+
+        if crop_type == GRAPE or crop_type == CORN:
+            return crop_type
+
+        print(INVALID_CROP_TYPE_MESSAGE)
+
+def get_positive_float(message):
+    while True:
+        value = input(message).strip()
+
+        try:
+            value = float(value)
+
+            if value > 0:
+                return value
+
+            print(INVALID_POSITIVE_NUMBER_MESSAGE)
+
+        except ValueError:
+            print(INVALID_NUMBER_MESSAGE)
+
 def create_record():
-    crop_type = input(ENTER_CROP_TYPE_MESSAGE).strip().lower()
-    width_meters = float(input(ENTER_WIDTH_MESSAGE))
-    length_meters = float(input(ENTER_LENGTH_MESSAGE))
-    input_type = input(ENTER_INPUT_TYPE_MESSAGE).strip().lower()
+    crop_type = get_valid_crop_type()
+    width_meters = get_positive_float(ENTER_WIDTH_MESSAGE)
+    length_meters = get_positive_float(ENTER_LENGTH_MESSAGE)
+    input_type = get_valid_text(ENTER_INPUT_TYPE_MESSAGE)
 
     if crop_type == GRAPE:
-        input_dosage = float(input(ENTER_GRAPE_INPUT_DOSAGE_MESSAGE))
-        row_spacing_meters = float(input(ENTER_ROW_WIDTH_MESSAGE))
+        input_dosage = get_positive_float(ENTER_GRAPE_INPUT_DOSAGE_MESSAGE)
+
+        while True:
+            row_spacing_meters = get_positive_float(ENTER_ROW_SPACING_MESSAGE)
+
+            if row_spacing_meters <= width_meters:
+                break
+
+            print(INVALID_ROW_SPACING_MESSAGE)
 
         area = calculate_grape_area(width_meters, length_meters)
         row_count = calculate_grape_row_count(width_meters, row_spacing_meters)
@@ -50,26 +95,22 @@ def create_record():
 
         return record
 
-    if crop_type == CORN:
-        input_dosage = float(input(ENTER_CORN_INPUT_DOSAGE_MESSAGE))
+    input_dosage = get_positive_float(ENTER_CORN_INPUT_DOSAGE_MESSAGE)
 
-        area = calculate_rectangular_area(width_meters, length_meters)
-        total_input = calculate_corn_input(area, input_dosage)
+    area = calculate_rectangular_area(width_meters, length_meters)
+    total_input = calculate_corn_input(area, input_dosage)
 
-        record = [
-            crop_type,
-            width_meters,
-            length_meters,
-            area,
-            input_type,
-            input_dosage,
-            total_input,
-            None,
-            None,
-            None
-        ]
+    record = [
+        crop_type,
+        width_meters,
+        length_meters,
+        area,
+        input_type,
+        input_dosage,
+        total_input,
+        None,
+        None,
+        None
+    ]
 
-        return record
-
-    print("Invalid crop type.")
-    return None
+    return record

@@ -23,7 +23,7 @@ from constants import (
     INDEX_INPUT_TYPE,
     INDEX_INPUT_DOSAGE,
     INDEX_TOTAL_INPUT,
-    INDEX_ROW_WIDTH_METERS,
+    INDEX_ROW_SPACING_METERS,
     INDEX_ROW_COUNT,
     INDEX_TOTAL_ROW_LENGTH
 )
@@ -44,14 +44,14 @@ def show_records():
         input_dosage = record[INDEX_INPUT_DOSAGE]
         total_input = record[INDEX_TOTAL_INPUT]
 
-        row_width = record[INDEX_ROW_WIDTH_METERS]
+        row_spacing = record[INDEX_ROW_SPACING_METERS]
         row_count = record[INDEX_ROW_COUNT]
         total_row_length = record[INDEX_TOTAL_ROW_LENGTH]
 
         # Tratamento de None → "N/A"
         area = area if area is not None else "N/A"
         total_input = f"{total_input:.2f}" if total_input != "N/A" else "N/A"
-        row_width = row_width if row_width is not None else "N/A"
+        row_spacing = row_spacing if row_spacing is not None else "N/A"
         row_count = row_count if row_count is not None else "N/A"
         total_row_length = total_row_length if total_row_length is not None else "N/A"
 
@@ -59,8 +59,8 @@ def show_records():
         print(f"    Area: {area} | Input: {input_type} | Dosage: {input_dosage} | Total Input: {total_input}")
 
         # Só mostra dados de uva se existir
-        if row_width != "N/A":
-            print(f"    Row Width: {row_width} m | Row Count: {row_count} | Total Row Length: {total_row_length}")
+        if row_spacing != "N/A":
+            print(f"    Row Spacing: {row_spacing} m | Row Count: {row_count} | Total Row Length: {total_row_length}")
 
 def main():
     while True:
