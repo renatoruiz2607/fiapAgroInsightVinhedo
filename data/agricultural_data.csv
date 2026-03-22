@@ -1,0 +1,5 @@
+crop_type,width_meters,length_meters,area,input_type,input_dosage,total_input,row_spacing_meters,row_count,total_row_length
+grape,98.0,142.0,13916.0,fungicide,0.5,1349.0,5.0,19,2698.0
+corn,80.0,84.0,6720.0,fertilizer,0.08,537.6,,,
+grape,76.0,98.0,7448.0,herbicide,0.02,19.6,7.0,10,980.0
+corn,172.0,194.0,33368.0,insecticide,0.3,10010.4,,,

@@ -1,11 +1,15 @@
 from menu import get_menu_option
 from crop_data import create_record
 from data_store import add_record, list_records, update_record, delete_record
+from export_data import export_records_to_csv
+from run_r_script import run_r_script
 from constants import (
     MENU_ADD,
     MENU_LIST,
     MENU_UPDATE,
     MENU_DELETE,
+    MENU_EXPORT,
+    MENU_RUN_R,
     MENU_EXIT,
     INVALID_OPTION_MESSAGE,
     EMPTY_RECORDS_MESSAGE,
@@ -25,7 +29,9 @@ from constants import (
     INDEX_TOTAL_INPUT,
     INDEX_ROW_SPACING_METERS,
     INDEX_ROW_COUNT,
-    INDEX_TOTAL_ROW_LENGTH
+    INDEX_TOTAL_ROW_LENGTH,
+    EXPORT_SUCCESS_MESSAGE,
+    NO_DATA_TO_EXPORT_MESSAGE
 )
 
 def show_records():
@@ -104,6 +110,17 @@ def main():
                 print(RECORD_DELETED_MESSAGE)
             else:
                 print(INVALID_INDEX_MESSAGE)
+
+        elif option == MENU_EXPORT:
+            if export_records_to_csv():
+                print(EXPORT_SUCCESS_MESSAGE)
+            else:
+                print(NO_DATA_TO_EXPORT_MESSAGE)
+
+        elif option == MENU_RUN_R:
+            output = run_r_script()
+            print("\n=== R Script Output ===")
+            print(output)
 
         elif option == MENU_EXIT:
             print(EXIT_MESSAGE)

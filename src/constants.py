@@ -3,6 +3,8 @@ MENU_ADD = "1"
 MENU_LIST = "2"
 MENU_UPDATE = "3"
 MENU_DELETE = "4"
+MENU_EXPORT = "5"
+MENU_RUN_R = "6"
 MENU_EXIT = "0"
 
 # Crop types
@@ -34,6 +36,9 @@ INVALID_NUMBER_MESSAGE = "Invalid value. Please enter a numeric value."
 INVALID_POSITIVE_NUMBER_MESSAGE = "Invalid value. Please enter a number greater than zero."
 INVALID_ROW_SPACING_MESSAGE = "Row spacing cannot be greater than field width."
 INVALID_TEXT_MESSAGE = "Invalid value. Please enter text."
+EXPORT_SUCCESS_MESSAGE = "Data exported successfully to CSV."
+EXPORT_ERROR_MESSAGE = "An error occurred while exporting data."
+NO_DATA_TO_EXPORT_MESSAGE = "There are no records to export."
 
 # Input prompts
 ENTER_CROP_TYPE_MESSAGE = "Enter crop type (grape/corn): "
@@ -45,6 +50,8 @@ ENTER_CORN_INPUT_DOSAGE_MESSAGE = "Enter input dosage per square meter: "
 ENTER_ROW_SPACING_MESSAGE = "Enter row spacing in meters: "
 ENTER_UPDATE_INDEX_MESSAGE = "Enter the record index to update: "
 ENTER_DELETE_INDEX_MESSAGE = "Enter the record index to delete: "
+R_SCRIPT_SUCCESS_MESSAGE = "R script executed successfully."
+R_SCRIPT_ERROR_MESSAGE = "Error running R script."
 
 # Menu texts
 MENU_TITLE = "\n=== Agro Insight Menu ==="
@@ -52,5 +59,13 @@ MENU_ADD_TEXT = "1 - Add record"
 MENU_LIST_TEXT = "2 - List records"
 MENU_UPDATE_TEXT = "3 - Update record"
 MENU_DELETE_TEXT = "4 - Delete record"
+MENU_EXPORT_TEXT = "5 - Export records to CSV"
+MENU_RUN_R_TEXT = "6 - Run statistical analysis (R)"
 MENU_EXIT_TEXT = "0 - Exit"
 MENU_CHOOSE_OPTION_TEXT = "Choose an option: "
+
+# CSV path
+CSV_FILE_PATH = "data/agricultural_data.csv"
+
+# R script path
+R_SCRIPT_PATH = "scripts/agricultural_statistics.R"
