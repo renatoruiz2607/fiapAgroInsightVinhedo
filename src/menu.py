@@ -6,6 +6,7 @@ from constants import (
     MENU_DELETE_TEXT,
     MENU_EXPORT_TEXT,
     MENU_RUN_R_TEXT,
+    MENU_RUN_WEATHER_TEXT,
     MENU_EXIT_TEXT,
     MENU_CHOOSE_OPTION_TEXT
 )
@@ -18,6 +19,7 @@ def display_menu():
     print(MENU_DELETE_TEXT)
     print(MENU_EXPORT_TEXT)
     print(MENU_RUN_R_TEXT)
+    print(MENU_RUN_WEATHER_TEXT)
     print(MENU_EXIT_TEXT)
 
 def get_menu_option():
