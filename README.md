@@ -6,9 +6,9 @@
 
 <br>
 
-# Nome do projeto
+# Agro Insight Vinhedo
 
-## Nome do grupo
+## Grupo
 
 ## 👨‍🎓 Integrantes: 
 - <a href="https://www.linkedin.com/in/renatoruizcai">Renato Ruiz Cai</a>
