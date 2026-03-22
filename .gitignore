@@ -1,5 +1,4 @@
 *.csv
-!data/agricultural_data.csv
 *.tsv
 *.xls
 *.xlsx
