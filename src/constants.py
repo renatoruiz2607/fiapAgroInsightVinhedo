@@ -5,6 +5,7 @@ MENU_UPDATE = "3"
 MENU_DELETE = "4"
 MENU_EXPORT = "5"
 MENU_RUN_R = "6"
+MENU_RUN_WEATHER = "7"
 MENU_EXIT = "0"
 
 # Crop types
@@ -52,6 +53,7 @@ ENTER_UPDATE_INDEX_MESSAGE = "Enter the record index to update: "
 ENTER_DELETE_INDEX_MESSAGE = "Enter the record index to delete: "
 R_SCRIPT_SUCCESS_MESSAGE = "R script executed successfully."
 R_SCRIPT_ERROR_MESSAGE = "Error running R script."
+WEATHER_SCRIPT_ERROR_MESSAGE = "Error running weather report script."
 
 # Menu texts
 MENU_TITLE = "\n=== Agro Insight Menu ==="
@@ -61,11 +63,14 @@ MENU_UPDATE_TEXT = "3 - Update record"
 MENU_DELETE_TEXT = "4 - Delete record"
 MENU_EXPORT_TEXT = "5 - Export records to CSV"
 MENU_RUN_R_TEXT = "6 - Run statistical analysis (R)"
+MENU_RUN_WEATHER_TEXT = "7 - Run weather report (R)"
+WEATHER_SCRIPT_OUTPUT_TITLE = "\n=== Weather Report ==="
 MENU_EXIT_TEXT = "0 - Exit"
 MENU_CHOOSE_OPTION_TEXT = "Choose an option: "
 
 # CSV path
 CSV_FILE_PATH = "data/agricultural_data.csv"
 
-# R script path
+# R scripts paths
 R_SCRIPT_PATH = "scripts/agricultural_statistics.R"
+WEATHER_SCRIPT_PATH = "scripts/weather_report.R"

@@ -3,6 +3,7 @@ from crop_data import create_record
 from data_store import add_record, list_records, update_record, delete_record
 from export_data import export_records_to_csv
 from run_r_script import run_r_script
+from run_weather_script import run_weather_script
 from constants import (
     MENU_ADD,
     MENU_LIST,
@@ -10,6 +11,7 @@ from constants import (
     MENU_DELETE,
     MENU_EXPORT,
     MENU_RUN_R,
+    MENU_RUN_WEATHER,
     MENU_EXIT,
     INVALID_OPTION_MESSAGE,
     EMPTY_RECORDS_MESSAGE,
@@ -31,7 +33,8 @@ from constants import (
     INDEX_ROW_COUNT,
     INDEX_TOTAL_ROW_LENGTH,
     EXPORT_SUCCESS_MESSAGE,
-    NO_DATA_TO_EXPORT_MESSAGE
+    NO_DATA_TO_EXPORT_MESSAGE,
+    WEATHER_SCRIPT_OUTPUT_TITLE
 )
 
 def show_records():
@@ -120,6 +123,11 @@ def main():
         elif option == MENU_RUN_R:
             output = run_r_script()
             print("\n=== R Script Output ===")
+            print(output)
+
+        elif option == MENU_RUN_WEATHER:
+            output = run_weather_script()
+            print(WEATHER_SCRIPT_OUTPUT_TITLE)
             print(output)
 
         elif option == MENU_EXIT:
