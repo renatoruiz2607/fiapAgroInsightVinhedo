@@ -88,14 +88,14 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
 
 *Ao iniciar, o sistema exibirá um menu interativo no terminal com opções para:*
-   *- adicionar registros de culturas*
-   *- listar registros cadastrados*
-   *- atualizar registros*
-   *- excluir registros*
-   *- exportar os dados para CSV*
-   *- executar a análise estatística em R*
-   *- executar a consulta meteorológica em R*
-   *- encerrar a execução*
+   - *adicionar registros de culturas*
+   - *listar registros cadastrados*
+   - *atualizar registros*
+   - *excluir registros*
+   - *exportar os dados para CSV*
+   - *executar a análise estatística em R*
+   - *executar a consulta meteorológica em R*
+   - *encerrar a execução*
 
 
 ## 🗃 Histórico de lançamentos
