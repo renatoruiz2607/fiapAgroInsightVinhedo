@@ -56,7 +56,7 @@ R_SCRIPT_ERROR_MESSAGE = "Error running R script."
 WEATHER_SCRIPT_ERROR_MESSAGE = "Error running weather report script."
 
 # Menu texts
-MENU_TITLE = "\n=== Agro Insight Menu ==="
+MENU_TITLE = "\n=== Agro Insight Vinhedo Menu ==="
 MENU_ADD_TEXT = "1 - Add record"
 MENU_LIST_TEXT = "2 - List records"
 MENU_UPDATE_TEXT = "3 - Update record"
